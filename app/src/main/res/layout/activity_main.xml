@@ -1,26 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.renatodias.pereirofc.MainActivity">
 
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="PEREIRO FC!"
-        android:gravity="center"
-        android:id="@+id/textApresentacao"
-        android:textColor="@color/colorPereiroFC"
-        android:textSize="25sp"/>
-
-
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recycler_view"
+    <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/textApresentacao"/>
+        android:layout_height="wrap_content">
 
+    </android.support.design.widget.AppBarLayout>
 
-</RelativeLayout>
+    <include layout="@layout/content_main" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"
+        android:clickable="true"
+        app:backgroundTint="@color/colorButton"
+        app:srcCompat="@drawable/ic_thumb_up_white_24dp"/>
+
+</android.support.design.widget.CoordinatorLayout>
