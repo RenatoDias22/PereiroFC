@@ -16,6 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <application android:name=".JogadorAdapter" />
+
+        <activity android:name=".TimesActivity"></activity>
     </application>
 
 </manifest>

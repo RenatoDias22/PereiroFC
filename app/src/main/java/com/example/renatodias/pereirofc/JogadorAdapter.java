@@ -12,39 +12,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-/**
- * Created by renatodias on 24/07/17.
- */
-
-
-class Jogador{
-    private int id;
-    private String nome;
-    private int fotoPerfil;
-
-    public Jogador(Jogador jogador) {
-        this.id = jogador.id;
-        this.nome = jogador.nome;
-        this.fotoPerfil = jogador.fotoPerfil;
-    }
-    public Jogador(int id, String nome, int fotoPerfil) {
-        this.id = id;
-        this.nome = nome;
-        this.fotoPerfil = fotoPerfil;
-    }
-
-    public int getId(){
-        return this.id;
-    }
-
-    public String getNome(){
-        return this.nome;
-    }
-
-    public int getFotoPerfil(){
-        return this.fotoPerfil;
-    }
-}
 public class JogadorAdapter extends RecyclerView.Adapter<JogadorAdapter.ViewHolder> {
 
     private Jogador[] jogadores = {
@@ -57,8 +24,6 @@ public class JogadorAdapter extends RecyclerView.Adapter<JogadorAdapter.ViewHold
             new Jogador(7 ,"Bruno", R.drawable.bruno)
 
     };
-
-    private List<Jogador> jogadoresSelecionados = new ArrayList<>();
 
 //    private String[] titles = {
 //            "Renato Dias",
@@ -102,7 +67,7 @@ public class JogadorAdapter extends RecyclerView.Adapter<JogadorAdapter.ViewHold
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override public void onClick(View v) {
                     int position = getAdapterPosition();
-                    jogadoresSelecionados.add(new Jogador(jogadores[position]));
+                    GlobalClass.jogadoresSelecionados.add(new Jogador(jogadores[position]));
                     v.setBackgroundColor(Color.parseColor("#999999"));
                     checkOk.setImageResource(R.drawable.ic_thumb_up_black_24dp);
                     v.setClickable(false);
@@ -129,4 +94,5 @@ public class JogadorAdapter extends RecyclerView.Adapter<JogadorAdapter.ViewHold
     public int getItemCount() {
         return jogadores.length;
     }
+
 }
