@@ -15,6 +15,12 @@ class Jogador{
         this.nome = jogador.nome;
         this.fotoPerfil = jogador.fotoPerfil;
     }
+
+    public Jogador() {
+        this.id = -1;
+        this.nome = null;
+        this.fotoPerfil = -1;
+    }
     public Jogador(int id, String nome, int fotoPerfil) {
         this.id = id;
         this.nome = nome;

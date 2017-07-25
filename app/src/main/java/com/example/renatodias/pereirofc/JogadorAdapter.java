@@ -21,8 +21,8 @@ public class JogadorAdapter extends RecyclerView.Adapter<JogadorAdapter.ViewHold
             new Jogador(4 ,"Italo Siqueira", R.drawable.italo_siqueira),
             new Jogador(5 ,"Wilson Vasconcelos", R.drawable.wilson_vasconcelos),
             new Jogador(6 ,"Perboyre Morais", R.drawable.perboyre_morais),
-            new Jogador(7 ,"Bruno", R.drawable.bruno)
-
+            new Jogador(7 ,"Bruno", R.drawable.bruno),
+            new Jogador(8, "luiZ Carlos", R.drawable.luiz_carlos)
     };
 
     class ViewHolder extends RecyclerView.ViewHolder{

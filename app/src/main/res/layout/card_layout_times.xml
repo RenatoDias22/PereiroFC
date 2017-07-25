@@ -16,14 +16,6 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="Time 1"
-            android:gravity="center"
-            android:id="@+id/textTime"
-            android:textColor="#000"
-            android:textSize="20sp"/>
 
         <ImageView
             android:layout_width="match_parent"
@@ -31,7 +23,6 @@
             android:id="@+id/item_image_times"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="15dp"
             android:src="@drawable/quadra2"
             />
 
@@ -39,25 +30,30 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:id="@+id/item_image_jogador_1_1"
-            android:layout_marginLeft="70dp"
+            android:layout_marginLeft="40dp"
             android:layout_marginTop="50dp"
             android:src="@drawable/renato_dias"
             />
 
         <TextView
             android:id="@+id/item_texte_jogador_1_1"
-            android:layout_width="wrap_content"
-            android:layout_height="20dp"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
             android:layout_alignLeft="@+id/item_image_jogador_1_1"
             android:layout_below="@+id/item_image_jogador_1_1"
             android:text="Renato Dias"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textSize="10dp"
+            android:lines="2"
+            android:maxLines="2"
+            />
 
         <ImageView
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:id="@+id/item_image_jogador_1_2"
-            android:layout_marginLeft="220dp"
+            android:layout_marginLeft="110dp"
             android:layout_marginTop="50dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
@@ -66,18 +62,22 @@
 
         <TextView
             android:id="@+id/item_texte_jogador_1_2"
-            android:layout_width="wrap_content"
-            android:layout_height="20dp"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
             android:layout_alignLeft="@+id/item_image_jogador_1_2"
             android:layout_below="@+id/item_image_jogador_1_2"
             android:text="Renato Helsson"
+            android:textSize="10dp"
+            android:gravity="center"
+            android:lines="2"
+            android:maxLines="2"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
         <ImageView
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:id="@+id/item_image_jogador_1_3"
-            android:layout_marginLeft="70dp"
+            android:layout_marginLeft="40dp"
             android:layout_marginTop="150dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
@@ -86,19 +86,22 @@
 
         <TextView
             android:id="@+id/item_texte_jogador_1_3"
-            android:layout_width="wrap_content"
-            android:layout_height="20dp"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
             android:layout_alignLeft="@+id/item_image_jogador_1_3"
             android:layout_below="@+id/item_image_jogador_1_3"
             android:text="Filippe Morais"
-
+            android:textSize="10dp"
+            android:gravity="center"
+            android:lines="2"
+            android:maxLines="2"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
         <ImageView
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:id="@+id/item_image_jogador_1_4"
-            android:layout_marginLeft="220dp"
+            android:layout_marginLeft="110dp"
             android:layout_marginTop="150dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
@@ -107,56 +110,112 @@
 
         <TextView
             android:id="@+id/item_texte_jogador_1_4"
-            android:layout_width="wrap_content"
-            android:layout_height="20dp"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
             android:layout_alignLeft="@+id/item_image_jogador_1_4"
             android:layout_below="@+id/item_image_jogador_1_4"
             android:text="Bruno"
+            android:textSize="10dp"
+            android:gravity="center"
+            android:lines="2"
+            android:maxLines="2"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
-        <!--<ImageView-->
-            <!--android:layout_width="50dp"-->
-            <!--android:layout_height="50dp"-->
-            <!--android:id="@+id/item_image_jogador_2_1"-->
-            <!--android:layout_marginLeft="190dp"-->
-            <!--android:layout_marginTop="50dp"-->
-            <!--android:layout_alignParentLeft="true"-->
-            <!--android:layout_alignParentTop="true"-->
-            <!--android:src="@drawable/perboyre_morais"-->
-            <!--/>-->
 
-        <!--<ImageView-->
-            <!--android:layout_width="50dp"-->
-            <!--android:layout_height="50dp"-->
-            <!--android:id="@+id/item_image_jogador_2_2"-->
-            <!--android:layout_marginLeft="260dp"-->
-            <!--android:layout_marginTop="50dp"-->
-            <!--android:layout_alignParentLeft="true"-->
-            <!--android:layout_alignParentTop="true"-->
-            <!--android:src="@drawable/wilson_vasconcelos"-->
-            <!--/>-->
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/item_image_jogador_2_1"
+            android:layout_marginLeft="190dp"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/perboyre_morais"
+            />
 
-        <!--<ImageView-->
-            <!--android:layout_width="50dp"-->
-            <!--android:layout_height="50dp"-->
-            <!--android:id="@+id/item_image_jogador_2_3"-->
-            <!--android:layout_marginLeft="190dp"-->
-            <!--android:layout_marginTop="150dp"-->
-            <!--android:layout_alignParentLeft="true"-->
-            <!--android:layout_alignParentTop="true"-->
-            <!--android:src="@drawable/italo_siqueira"-->
-            <!--/>-->
+        <TextView
+            android:id="@+id/item_texte_jogador_2_1"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/item_image_jogador_2_1"
+            android:layout_below="@+id/item_image_jogador_2_1"
+            android:text="Perboyre Morais"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textSize="10dp"
+            android:lines="2"
+            android:maxLines="2"
+            />
 
-        <!--<ImageView-->
-            <!--android:layout_width="50dp"-->
-            <!--android:layout_height="50dp"-->
-            <!--android:id="@+id/item_image_jogador_2_4"-->
-            <!--android:layout_marginLeft="260dp"-->
-            <!--android:layout_marginTop="150dp"-->
-            <!--android:layout_alignParentLeft="true"-->
-            <!--android:layout_alignParentTop="true"-->
-            <!--android:src="@drawable/renato_dias"-->
-            <!--/>-->
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/item_image_jogador_2_2"
+            android:layout_marginLeft="260dp"
+            android:layout_marginTop="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/wilson_vasconcelos"
+            />
+
+        <TextView
+            android:id="@+id/item_texte_jogador_2_2"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/item_image_jogador_2_2"
+            android:layout_below="@+id/item_image_jogador_2_2"
+            android:text="Wilson Vasconcelos"
+            android:textSize="10dp"
+            android:gravity="center"
+            android:lines="2"
+            android:maxLines="2"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/item_image_jogador_2_3"
+            android:layout_marginLeft="190dp"
+            android:layout_marginTop="150dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/italo_siqueira"
+            />
+
+        <TextView
+            android:id="@+id/item_texte_jogador_2_3"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/item_image_jogador_2_3"
+            android:layout_below="@+id/item_image_jogador_2_3"
+            android:text="Italo Siqueira"
+            android:textSize="10dp"
+            android:gravity="center"
+            android:lines="2"
+            android:maxLines="2"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/item_image_jogador_2_4"
+            android:layout_marginLeft="260dp"
+            android:layout_marginTop="150dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/luiz_carlos"
+            />
+
+        <TextView
+            android:id="@+id/item_texte_jogador_2_4"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/item_image_jogador_2_4"
+            android:layout_below="@+id/item_image_jogador_2_4"
+            android:text="Luiz Carlos"
+            android:textSize="10dp"
+            android:gravity="center"
+            android:lines="2"
+            android:maxLines="2"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
 
     </RelativeLayout>
