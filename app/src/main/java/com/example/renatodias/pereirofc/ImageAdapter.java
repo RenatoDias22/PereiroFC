@@ -42,14 +42,14 @@ public class ImageAdapter extends BaseAdapter {
         if (convertView == null) {
             // if it's not recycled, initialize some attributes
             imageView = new ImageView(mContext);
-            imageView.setLayoutParams(new GridView.LayoutParams(1100, 800));
+            imageView.setLayoutParams(new GridView.LayoutParams(1090, 800));
             imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
             imageView.setPadding(16, 16, 16, 16);
         } else {
             imageView = (ImageView) convertView;
         }
 
-        imageView.setImageResource(R.drawable.quadra);
+        imageView.setImageResource(R.drawable.quadra2);
 //        imageView.setImageResource(jogadoresSelecionados.get(position).getFotoPerfil());
         return imageView;
     }

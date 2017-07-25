@@ -25,30 +25,6 @@ public class JogadorAdapter extends RecyclerView.Adapter<JogadorAdapter.ViewHold
 
     };
 
-//    private String[] titles = {
-//            "Renato Dias",
-//            "Filippe Morais",
-//            "Renato Helsson",
-//            "Italo Siqueira",
-//            "Wilson Vasconcelos",
-//            "Perboyre Moraisbruno",
-//            "Bruno"};
-
-//    private String[] details = {
-//            "Item one details",
-//            "Item two details", "Item three details",
-//            "Item four details", "Item file details",
-//            "Item six details", "Item seven details"};
-
-//    private int[] images = {
-//            R.drawable.renato_dias,
-//            R.drawable.filippe_morais,
-//            R.drawable.renato_helsson,
-//            R.drawable.italo_siqueira,
-//            R.drawable.wilson_vasconcelos,
-//            R.drawable.perboyre_morais,
-//            R.drawable.bruno};
-
     class ViewHolder extends RecyclerView.ViewHolder{
 
         public int currentItem;
