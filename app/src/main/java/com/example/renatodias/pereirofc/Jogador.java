@@ -9,28 +9,29 @@ class Jogador{
     private int id;
     private String nome;
     private int fotoPerfil;
+    private boolean selecionado;
 
     public Jogador(Jogador jogador) {
         this.id = jogador.id;
         this.nome = jogador.nome;
         this.fotoPerfil = jogador.fotoPerfil;
+        this.selecionado = jogador.selecionado;
     }
 
-    public Jogador() {
-        this.id = -1;
-        this.nome = null;
-        this.fotoPerfil = -1;
-    }
-    public Jogador(int id, String nome, int fotoPerfil) {
+    public Jogador(int id, String nome, int fotoPerfil, boolean selecionado) {
         this.id = id;
         this.nome = nome;
         this.fotoPerfil = fotoPerfil;
+        this.selecionado = selecionado;
     }
 
     public int getId(){
         return this.id;
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
     public String getNome(){
         return this.nome;
     }
@@ -39,15 +40,17 @@ class Jogador{
         return this.fotoPerfil;
     }
 
+    public Boolean getSelecionado(){
+        return this.selecionado;
+    }
+
+    public void setSelecionado(boolean selecionado){
+        this.selecionado = selecionado;
+    }
+
     public Jogador[] Jogadores() {
         Jogador[] jogadores = {
-                new Jogador(1 ,"Renato Dias", R.drawable.renato_dias),
-                new Jogador(2 ,"Filippe Morais", R.drawable.filippe_morais),
-                new Jogador(3 ,"Renato Helsson", R.drawable.renato_helsson),
-                new Jogador(4 ,"Italo Siqueira", R.drawable.italo_siqueira),
-                new Jogador(5 ,"Wilson Vasconcelos", R.drawable.wilson_vasconcelos),
-                new Jogador(6 ,"Perboyre Morais", R.drawable.perboyre_morais),
-                new Jogador(7 ,"Bruno", R.drawable.bruno)
+                new Jogador(1 ,"Renato Dias", R.drawable.renato_dias, false)
 
         };
         return jogadores;

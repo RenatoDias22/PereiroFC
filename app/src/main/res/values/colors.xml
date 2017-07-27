@@ -4,6 +4,6 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="colorPereiroFC">#06815d</color>
-    <color name="colorButton">#5C3317</color>
+    <color name="colorButton">#000</color>
 
 </resources>

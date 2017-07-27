@@ -2,6 +2,7 @@ package com.example.renatodias.pereirofc;
 
 import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -148,6 +149,7 @@ public class TimesAdapter extends RecyclerView.Adapter<TimesAdapter.ViewHolderTi
     public int getItemCount() {
 //        return jogadores.length;
         jogadores = GlobalClass.jogadoresSelecionados;
+        Log.i("Global ficando null: ", "" + GlobalClass.jogadoresSelecionados);
         Times t = new Times();
         while (jogadores.size() > 0){
 //            if(jogadores.size() > 3){
