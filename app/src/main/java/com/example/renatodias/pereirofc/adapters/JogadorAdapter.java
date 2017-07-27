@@ -1,19 +1,16 @@
-package com.example.renatodias.pereirofc;
+package com.example.renatodias.pereirofc.adapters;
 
 import android.graphics.Color;
-import android.media.Image;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
+import com.example.renatodias.pereirofc.GlobalClass;
+import com.example.renatodias.pereirofc.R;
+import com.example.renatodias.pereirofc.model.Jogador;
 
 public class JogadorAdapter extends RecyclerView.Adapter<JogadorAdapter.ViewHolder> {
 
@@ -55,12 +52,14 @@ public class JogadorAdapter extends RecyclerView.Adapter<JogadorAdapter.ViewHold
                     if(jogadores[position].getSelecionado() == false) {
                         GlobalClass.jogadoresSelecionados.add(new Jogador(jogadores[position]));
                         v.setBackgroundColor(Color.parseColor("#999999"));
-//                        checkOk.setImageResource(R.drawable.ic_thumb_up_black_24dp);
+                        checkOk.setImageResource(R.drawable.ic_check_black_24dp);
+                        checkOk.setVisibility(View.VISIBLE);
                         v.setClickable(false);
                         jogadores[position].setSelecionado(true);
                     }else{
                         v.setBackgroundColor(Color.parseColor("#ffffff"));
-//                        checkOk.setImageResource(R.drawable.ic_thumb_up_black_24dp);
+                        checkOk.setImageResource(R.drawable.ic_check_black_24dp);
+                        checkOk.setVisibility(View.INVISIBLE);
                         v.setClickable(true);
                     }
                 }
@@ -83,11 +82,13 @@ public class JogadorAdapter extends RecyclerView.Adapter<JogadorAdapter.ViewHold
 
         if(jogadores[i].getSelecionado()){
             viewHolder.itemView.setBackgroundColor(Color.parseColor("#999999"));
-//            viewHolder.checkOk.setImageResource(R.drawable.ic_thumb_up_black_24dp);
+            viewHolder.checkOk.setImageResource(R.drawable.ic_check_black_24dp);
+            viewHolder.checkOk.setVisibility(View.VISIBLE);
             viewHolder.itemView.setClickable(false);
         }else {
             viewHolder.itemView.setBackgroundColor(Color.parseColor("#ffffff"));
             viewHolder.itemView.setClickable(true);
+            viewHolder.checkOk.setVisibility(View.INVISIBLE);
         }
     }
 

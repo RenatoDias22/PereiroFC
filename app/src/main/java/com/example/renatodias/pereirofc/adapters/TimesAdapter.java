@@ -1,6 +1,5 @@
-package com.example.renatodias.pereirofc;
+package com.example.renatodias.pereirofc.adapters;
 
-import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -9,7 +8,12 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.sql.Time;
+import com.example.renatodias.pereirofc.GlobalClass;
+import com.example.renatodias.pereirofc.R;
+import com.example.renatodias.pereirofc.model.Jogador;
+import com.example.renatodias.pereirofc.model.Jogador;
+import com.example.renatodias.pereirofc.model.Times;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -17,21 +21,6 @@ import java.util.Random;
 /**
  * Created by renatodias on 25/07/17.
  */
-
-class Times {
-    List<Jogador> time;
-    public Times(){
-        time = new ArrayList<>();
-    }
-
-    public void addJogador(Jogador j){
-        this.time.add(j);
-    }
-
-    public List<Jogador> getTime(){
-        return this.time;
-    }
-}
 
 public class TimesAdapter extends RecyclerView.Adapter<TimesAdapter.ViewHolderTimes> {
     Random random = new Random();
@@ -157,7 +146,7 @@ public class TimesAdapter extends RecyclerView.Adapter<TimesAdapter.ViewHolderTi
                 t.addJogador(jogadores.get(y));
                 jogadores.remove(y);
 //            }
-            if (t.time.size() == 4 ) {
+            if (t.getSize() == 4 ) {
                 time.add(t);
                 t = new Times();
             }

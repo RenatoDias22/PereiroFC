@@ -1,4 +1,4 @@
-package com.example.renatodias.pereirofc;
+package com.example.renatodias.pereirofc.activitys;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,6 +8,9 @@ import android.view.View;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.TextView;
+
+import com.example.renatodias.pereirofc.adapters.JogadorAdapter;
+import com.example.renatodias.pereirofc.R;
 
 
 public class MainActivity extends AppCompatActivity {

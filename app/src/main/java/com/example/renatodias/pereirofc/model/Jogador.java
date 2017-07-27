@@ -1,11 +1,13 @@
-package com.example.renatodias.pereirofc;
+package com.example.renatodias.pereirofc.model;
+
+import com.example.renatodias.pereirofc.R;
 
 /**
  * Created by renatodias on 24/07/17.
  */
 
 
-class Jogador{
+public class Jogador{
     private int id;
     private String nome;
     private int fotoPerfil;

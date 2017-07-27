@@ -2,6 +2,8 @@ package com.example.renatodias.pereirofc;
 
 import android.app.Application;
 
+import com.example.renatodias.pereirofc.model.Jogador;
+
 import java.util.ArrayList;
 import java.util.List;
 
