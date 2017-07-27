@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginBottom="56dp"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.renatodias.pereirofc.activitys.MainActivity"
     tools:showIn="@layout/activity_main">
@@ -16,20 +17,19 @@
         android:background="@color/colorPereiroFC"
         tools:context="com.example.renatodias.pereirofc.activitys.MainActivity">
 
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="PEREIRO FC!"
-            android:gravity="center"
-            android:id="@+id/textApresentacao"
-            android:textColor="#fff"
-            android:textSize="25sp"/>
+        <!--<TextView-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="PEREIRO FC!"-->
+            <!--android:gravity="center"-->
+            <!--android:id="@+id/textApresentacao"-->
+            <!--android:textColor="#fff"-->
+            <!--android:textSize="25sp"/>-->
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recycler_view"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@id/textApresentacao"/>
+            android:layout_height="match_parent"/>
 
     </RelativeLayout>
 

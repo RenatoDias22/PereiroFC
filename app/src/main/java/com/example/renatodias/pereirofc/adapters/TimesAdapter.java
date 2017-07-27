@@ -106,32 +106,46 @@ public class TimesAdapter extends RecyclerView.Adapter<TimesAdapter.ViewHolderTi
     @Override
     public void onBindViewHolder(ViewHolderTimes holder, int position) {
 
-//        if(time.size() > 2) {
-            List<Jogador> time1 = time.get(0).getTime();
-            holder.itemImageJogador_1_1.setImageResource(time1.get(0).getFotoPerfil());
-            holder.itemImageJogador_1_2.setImageResource(time1.get(1).getFotoPerfil());
-            holder.itemImageJogador_1_3.setImageResource(time1.get(2).getFotoPerfil());
-            holder.itemImageJogador_1_4.setImageResource(time1.get(3).getFotoPerfil());
+        if(time.get(position).getTime1() != null) {
+            List<Jogador> time1 = time.get(position).getTime1();
+            if (time1.size() > 0) {
+                holder.itemImageJogador_1_1.setImageResource(time1.get(0).getFotoPerfil());
+                holder.itemTexteJogador_1_1.setText(time1.get(0).getNome());
+            }
+            if (time1.size() > 1) {
+                holder.itemImageJogador_1_2.setImageResource(time1.get(1).getFotoPerfil());
+                holder.itemTexteJogador_1_2.setText(time1.get(1).getNome());
+            }
+            if (time1.size() > 2) {
+                holder.itemImageJogador_1_3.setImageResource(time1.get(2).getFotoPerfil());
+                holder.itemTexteJogador_1_3.setText(time1.get(2).getNome());
+            }
+            if (time1.size() > 3) {
+                holder.itemImageJogador_1_4.setImageResource(time1.get(3).getFotoPerfil());
+                holder.itemTexteJogador_1_4.setText(time1.get(3).getNome());
+            }
+        }
+        if(time.get(position).getTime2() != null) {
+            List<Jogador> time2 = time.get(position).getTime2();
+            if (time2.size() > 0) {
+                holder.itemImageJogador_2_1.setImageResource(time2.get(0).getFotoPerfil());
+                holder.itemTexteJogador_2_1.setText(time2.get(0).getNome());
+            }
 
-            holder.itemTexteJogador_1_1.setText(time1.get(0).getNome());
-            holder.itemTexteJogador_1_2.setText(time1.get(1).getNome());
-            holder.itemTexteJogador_1_3.setText(time1.get(2).getNome());
-            holder.itemTexteJogador_1_4.setText(time1.get(3).getNome());
+            if (time2.size() > 1) {
+                holder.itemImageJogador_2_2.setImageResource(time2.get(1).getFotoPerfil());
+                holder.itemTexteJogador_2_2.setText(time2.get(1).getNome());
+            }
 
-            List<Jogador> time2 = time.get(1).getTime();
-            holder.itemImageJogador_2_1.setImageResource(time2.get(0).getFotoPerfil());
-            holder.itemImageJogador_2_2.setImageResource(time2.get(1).getFotoPerfil());
-            holder.itemImageJogador_2_3.setImageResource(time2.get(2).getFotoPerfil());
-            holder.itemImageJogador_2_4.setImageResource(time2.get(3).getFotoPerfil());
-
-            holder.itemTexteJogador_2_1.setText(time2.get(0).getNome());
-            holder.itemTexteJogador_2_2.setText(time2.get(1).getNome());
-            holder.itemTexteJogador_2_3.setText(time2.get(2).getNome());
-            holder.itemTexteJogador_2_4.setText(time2.get(3).getNome());
-//        }
-//        holder.itemTitle.setText(jogadores[position].getNome());
-//        viewHolder.itemDetail.setText(details[i]);
-//        holder.itemImage.setImageResource(jogadores[position].getFotoPerfil());
+            if (time2.size() > 2) {
+                holder.itemImageJogador_2_3.setImageResource(time2.get(2).getFotoPerfil());
+                holder.itemTexteJogador_2_3.setText(time2.get(2).getNome());
+            }
+            if (time2.size() > 3) {
+                holder.itemImageJogador_2_4.setImageResource(time2.get(3).getFotoPerfil());
+                holder.itemTexteJogador_2_4.setText(time2.get(3).getNome());
+            }
+        }
     }
 
     @Override
@@ -141,18 +155,35 @@ public class TimesAdapter extends RecyclerView.Adapter<TimesAdapter.ViewHolderTi
         Log.i("Global ficando null: ", "" + GlobalClass.jogadoresSelecionados);
         Times t = new Times();
         while (jogadores.size() > 0){
-//            if(jogadores.size() > 3){
+            int tm = 0;
+            while (tm != 4 && jogadores.size() > 0) {
                 int y = random.nextInt(jogadores.size());
-                t.addJogador(jogadores.get(y));
+                t.addJogador1(jogadores.get(y));
                 jogadores.remove(y);
-//            }
-            if (t.getSize() == 4 ) {
+
+
+                tm++;
+            }
+            tm = 0;
+            while (tm != 4 && jogadores.size() > 0) {
+                int z = random.nextInt(jogadores.size());
+                t.addJogador2(jogadores.get(z));
+                jogadores.remove(z);
+
+//                if (t.getSizeTime2() == 4) {
+//                    time.add(t);
+//                    t = new Times();
+//                }
+                tm++;
+            }
+
+            if (t.getSizeTime1() == 4) {
                 time.add(t);
                 t = new Times();
             }
         }
 
-        return time.size()/2;
+        return time.size();
     }
 
 }

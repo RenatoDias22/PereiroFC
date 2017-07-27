@@ -32,7 +32,6 @@
             android:id="@+id/item_image_jogador_1_1"
             android:layout_marginLeft="40dp"
             android:layout_marginTop="50dp"
-            android:src="@drawable/renato_dias"
             />
 
         <TextView
@@ -41,7 +40,6 @@
             android:layout_height="wrap_content"
             android:layout_alignLeft="@+id/item_image_jogador_1_1"
             android:layout_below="@+id/item_image_jogador_1_1"
-            android:text="Renato Dias"
             android:gravity="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"
             android:textSize="10dp"
@@ -57,7 +55,6 @@
             android:layout_marginTop="50dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:src="@drawable/renato_helsson"
             />
 
         <TextView
@@ -66,7 +63,6 @@
             android:layout_height="wrap_content"
             android:layout_alignLeft="@+id/item_image_jogador_1_2"
             android:layout_below="@+id/item_image_jogador_1_2"
-            android:text="Renato Helsson"
             android:textSize="10dp"
             android:gravity="center"
             android:lines="2"
@@ -81,7 +77,6 @@
             android:layout_marginTop="150dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:src="@drawable/filippe_morais"
             />
 
         <TextView
@@ -90,7 +85,6 @@
             android:layout_height="wrap_content"
             android:layout_alignLeft="@+id/item_image_jogador_1_3"
             android:layout_below="@+id/item_image_jogador_1_3"
-            android:text="Filippe Morais"
             android:textSize="10dp"
             android:gravity="center"
             android:lines="2"
@@ -105,7 +99,6 @@
             android:layout_marginTop="150dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:src="@drawable/bruno"
             />
 
         <TextView
@@ -114,7 +107,6 @@
             android:layout_height="wrap_content"
             android:layout_alignLeft="@+id/item_image_jogador_1_4"
             android:layout_below="@+id/item_image_jogador_1_4"
-            android:text="Bruno"
             android:textSize="10dp"
             android:gravity="center"
             android:lines="2"
@@ -128,7 +120,6 @@
             android:id="@+id/item_image_jogador_2_1"
             android:layout_marginLeft="190dp"
             android:layout_marginTop="50dp"
-            android:src="@drawable/perboyre_morais"
             />
 
         <TextView
@@ -137,7 +128,6 @@
             android:layout_height="wrap_content"
             android:layout_alignLeft="@+id/item_image_jogador_2_1"
             android:layout_below="@+id/item_image_jogador_2_1"
-            android:text="Perboyre Morais"
             android:gravity="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"
             android:textSize="10dp"
@@ -153,7 +143,6 @@
             android:layout_marginTop="50dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:src="@drawable/wilson_vasconcelos"
             />
 
         <TextView
@@ -162,7 +151,6 @@
             android:layout_height="wrap_content"
             android:layout_alignLeft="@+id/item_image_jogador_2_2"
             android:layout_below="@+id/item_image_jogador_2_2"
-            android:text="Wilson Vasconcelos"
             android:textSize="10dp"
             android:gravity="center"
             android:lines="2"
@@ -177,7 +165,6 @@
             android:layout_marginTop="150dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:src="@drawable/italo_siqueira"
             />
 
         <TextView
@@ -186,7 +173,6 @@
             android:layout_height="wrap_content"
             android:layout_alignLeft="@+id/item_image_jogador_2_3"
             android:layout_below="@+id/item_image_jogador_2_3"
-            android:text="Italo Siqueira"
             android:textSize="10dp"
             android:gravity="center"
             android:lines="2"
@@ -201,7 +187,6 @@
             android:layout_marginTop="150dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:src="@drawable/luiz_carlos"
             />
 
         <TextView
@@ -210,7 +195,6 @@
             android:layout_height="wrap_content"
             android:layout_alignLeft="@+id/item_image_jogador_2_4"
             android:layout_below="@+id/item_image_jogador_2_4"
-            android:text="Luiz Carlos"
             android:textSize="10dp"
             android:gravity="center"
             android:lines="2"

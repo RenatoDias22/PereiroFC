@@ -15,17 +15,18 @@ import com.example.renatodias.pereirofc.model.Jogador;
 public class JogadorAdapter extends RecyclerView.Adapter<JogadorAdapter.ViewHolder> {
 
     private Jogador[] jogadores = {
-            new Jogador(0 ,"Bruno", R.drawable.bruno, false),
-            new Jogador(1,"Edyfabio Gomes", R.drawable.edyfabio_gomes, false),
-            new Jogador(2,"Gola", R.drawable.gola, false),
-            new Jogador(3 ,"Filippe Morais", R.drawable.filippe_morais, false),
-            new Jogador(4 ,"Italo Siqueira", R.drawable.italo_siqueira, false),
-            new Jogador(5, "Luiz Carlos", R.drawable.luiz_carlos, false),
-            new Jogador(6 ,"Perboyre Morais", R.drawable.perboyre_morais, false),
-            new Jogador(7 ,"Renato Dias", R.drawable.renato_dias, false),
-            new Jogador(8 ,"Renato Helsson", R.drawable.renato_helsson, false),
-            new Jogador(9 ,"Romim", R.drawable.romim, false),
-            new Jogador(10 ,"Wilson Vasconcelos", R.drawable.wilson_vasconcelos, false)
+            new Jogador(0  , "Bruno", R.drawable.bruno, false),
+            new Jogador(1  , "Edyfabio Gomes", R.drawable.edyfabio_gomes, false),
+            new Jogador(2  , "Gola", R.drawable.gola, false),
+            new Jogador(3  , "Filippe Morais", R.drawable.filippe_morais, false),
+            new Jogador(4  , "Italo Siqueira", R.drawable.italo_siqueira, false),
+            new Jogador(5  , "Luiz Carlos", R.drawable.luiz_carlos, false),
+            new Jogador(6  , "Perboyre Morais", R.drawable.perboyre_morais, false),
+            new Jogador(7  , "Renato Dias", R.drawable.renato_dias, false),
+            new Jogador(8  , "Renato Helsson", R.drawable.renato_helsson, false),
+            new Jogador(9  , "Romim", R.drawable.romim, false),
+            new Jogador(10 , "Wilson Vasconcelos", R.drawable.wilson_vasconcelos, false),
+            new Jogador(11 , "Paulinho", R.drawable.jogador_sem_foto, false)
 
     };
 
@@ -39,7 +40,7 @@ public class JogadorAdapter extends RecyclerView.Adapter<JogadorAdapter.ViewHold
         public TextView itemDetail;
 
 
-        public ViewHolder(final View itemView, int i, boolean selectend) {
+        public ViewHolder(final View itemView) {
             super(itemView);
             itemImage = (ImageView)itemView.findViewById(R.id.item_image);
             itemTitle = (TextView)itemView.findViewById(R.id.item_title);
@@ -72,7 +73,7 @@ public class JogadorAdapter extends RecyclerView.Adapter<JogadorAdapter.ViewHold
         View v = LayoutInflater.from(viewGroup.getContext())
                 .inflate(R.layout.card_layout, viewGroup, false);
 
-        return new ViewHolder(v, i, jogadores[i].getSelecionado());
+        return new ViewHolder(v);
     }
 
     public void onBindViewHolder(ViewHolder viewHolder, int i) {

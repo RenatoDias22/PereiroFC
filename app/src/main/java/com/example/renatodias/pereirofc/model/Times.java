@@ -10,20 +10,34 @@ import java.util.List;
  */
 
 public class Times {
-    List<Jogador> time;
+    List<Jogador> time1;
+    List<Jogador> time2;
     public Times(){
-        time = new ArrayList<>();
+        this.time1 = new ArrayList<>();
+        this.time2 = new ArrayList<>();
     }
 
-    public void addJogador(Jogador j){
-        this.time.add(j);
+    public void addJogador1(Jogador j){
+        this.time1.add(j);
     }
 
-    public List<Jogador> getTime(){
-        return this.time;
+    public List<Jogador> getTime1(){
+        return this.time1;
     }
 
-    public int getSize(){
-        return time.size();
+    public int getSizeTime1(){
+        return time1.size();
     }
+    public void addJogador2(Jogador j){
+        this.time2.add(j);
+    }
+
+    public List<Jogador> getTime2(){
+        return this.time2;
+    }
+
+    public int getSizeTime2(){
+        return time2.size();
+    }
+
 }
