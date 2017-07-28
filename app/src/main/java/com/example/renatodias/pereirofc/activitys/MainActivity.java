@@ -31,8 +31,6 @@ public class MainActivity extends AppCompatActivity {
         toolbar.setTitleTextColor(Color.parseColor("#ffffff"));
         toolbar.setNavigationIcon(R.mipmap.icon_pereiro);
         setSupportActionBar(toolbar);
-//        TextView txt = (TextView) findViewById(R.id.textApresentacao);
-//        getActionBar().setTitle("Renato");
         recyclerView =
                 (RecyclerView) findViewById(R.id.recycler_view);
 

@@ -13,31 +13,37 @@ import com.example.renatodias.pereirofc.R;
 import com.example.renatodias.pereirofc.model.Jogador;
 
 public class JogadorAdapter extends RecyclerView.Adapter<JogadorAdapter.ViewHolder> {
-
+    
     private Jogador[] jogadores = {
             new Jogador(0  , "Bruno", R.drawable.bruno, false),
-            new Jogador(1  , "Edyfabio Gomes", R.drawable.edyfabio_gomes, false),
-            new Jogador(2  , "Gola", R.drawable.gola, false),
+            new Jogador(1  , "Daniel Santos", R.drawable.daniel_santos, false),
+            new Jogador(2  , "Edyfabio Gomes", R.drawable.edyfabio_gomes, false),
             new Jogador(3  , "Filippe Morais", R.drawable.filippe_morais, false),
-            new Jogador(4  , "Italo Siqueira", R.drawable.italo_siqueira, false),
-            new Jogador(5  , "Luiz Carlos", R.drawable.luiz_carlos, false),
-            new Jogador(6  , "Perboyre Morais", R.drawable.perboyre_morais, false),
-            new Jogador(7  , "Renato Dias", R.drawable.renato_dias, false),
-            new Jogador(8  , "Renato Helsson", R.drawable.renato_helsson, false),
-            new Jogador(9  , "Romim", R.drawable.romim, false),
-            new Jogador(10 , "Wilson Vasconcelos", R.drawable.wilson_vasconcelos, false),
-            new Jogador(11 , "Paulinho", R.drawable.jogador_sem_foto, false)
-
+            new Jogador(4  , "Fred Morais", R.drawable.fred_morais, false),
+            new Jogador(5  , "Golinha", R.drawable.gola, false),
+            new Jogador(6  , "Hermeson", R.drawable.jogador_sem_foto, false),
+            new Jogador(7  , "Italo Siqueira", R.drawable.italo_siqueira, false),
+            new Jogador(8  , "João de Arão", R.drawable.joao_arao, false),
+            new Jogador(9  , "Junior Maciel", R.drawable.junior_maciel, false),
+            new Jogador(10 , "Luiz Carlos", R.drawable.luiz_carlos, false),
+            new Jogador(11 , "Marcos Paulo", R.drawable.marcos_paulo_morais, false),
+            new Jogador(12 , "Paulivan", R.drawable.paulivan, false),
+            new Jogador(13 , "Perboyre Morais", R.drawable.perboyre_morais, false),
+            new Jogador(14 , "Raul Feitosa", R.drawable.jogador_sem_foto, false),
+            new Jogador(15 , "Renato Dias", R.drawable.renato_dias, false),
+            new Jogador(16 , "Renato Helsson", R.drawable.renato_helsson, false),
+            new Jogador(17 , "Roberto Euclides", R.drawable.roberto_euclides, false),
+            new Jogador(18 , "Romim", R.drawable.romim, false),
+            new Jogador(19 , "Samuel Desidério", R.drawable.samuel_desiderio, false),
+            new Jogador(20 , "Thiago Santos", R.drawable.jogador_sem_foto, false),
+            new Jogador(21 , "Wilson Vasconcelos", R.drawable.wilson_vasconcelos, false)
     };
 
     class ViewHolder extends RecyclerView.ViewHolder {
-        public View aux;
 
-        public int currentItem;
         public ImageView itemImage;
         public ImageView checkOk;
         public TextView itemTitle;
-        public TextView itemDetail;
 
 
         public ViewHolder(final View itemView) {
@@ -72,13 +78,11 @@ public class JogadorAdapter extends RecyclerView.Adapter<JogadorAdapter.ViewHold
     public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         View v = LayoutInflater.from(viewGroup.getContext())
                 .inflate(R.layout.card_layout, viewGroup, false);
-
         return new ViewHolder(v);
     }
 
     public void onBindViewHolder(ViewHolder viewHolder, int i) {
         viewHolder.itemTitle.setText(jogadores[i].getNome());
-//        viewHolder.itemDetail.setText(details[i]);
         viewHolder.itemImage.setImageResource(jogadores[i].getFotoPerfil());
 
         if(jogadores[i].getSelecionado()){

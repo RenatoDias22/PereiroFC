@@ -27,6 +27,10 @@ public class Jogador{
         this.selecionado = selecionado;
     }
 
+    public Jogador() {
+
+    }
+
     public int getId(){
         return this.id;
     }
@@ -50,11 +54,24 @@ public class Jogador{
         this.selecionado = selecionado;
     }
 
-    public Jogador[] Jogadores() {
-        Jogador[] jogadores = {
-                new Jogador(1 ,"Renato Dias", R.drawable.renato_dias, false)
-
-        };
-        return jogadores;
-    }
+//    public static Jogador[] Jogadores() {
+//        Jogador[] jogadores = {
+//                new Jogador(0  , "Bruno", R.drawable.bruno, false),
+//                new Jogador(1  , "Daniel Santos", R.drawable.daniel_santos, false),
+//                new Jogador(2  , "Edyfabio Gomes", R.drawable.edyfabio_gomes, false),
+//                new Jogador(3  , "Filippe Morais", R.drawable.filippe_morais, false),
+//                new Jogador(4  , "Golinha", R.drawable.gola, false),
+//                new Jogador(5  , "Hermeson", R.drawable.jogador_sem_foto, false),
+//                new Jogador(6  , "Italo Siqueira", R.drawable.italo_siqueira, false),
+//                new Jogador(7  , "João de Arão", R.drawable.joao_arao, false),
+//                new Jogador(8  , "Luiz Carlos", R.drawable.luiz_carlos, false),
+//                new Jogador(9  , "Paulivan", R.drawable.paulivan, false),
+//                new Jogador(10  , "Perboyre Morais", R.drawable.perboyre_morais, false),
+//                new Jogador(11  , "Renato Dias", R.drawable.renato_dias, false),
+//                new Jogador(12 , "Renato Helsson", R.drawable.renato_helsson, false),
+//                new Jogador(13 , "Romim", R.drawable.romim, false),
+//                new Jogador(14 , "Wilson Vasconcelos", R.drawable.wilson_vasconcelos, false)
+//        };
+//        return jogadores;
+//    }
 }
