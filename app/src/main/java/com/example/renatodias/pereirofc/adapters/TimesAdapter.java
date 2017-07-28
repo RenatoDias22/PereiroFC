@@ -150,18 +150,16 @@ public class TimesAdapter extends RecyclerView.Adapter<TimesAdapter.ViewHolderTi
 
     @Override
     public int getItemCount() {
-//        return jogadores.length;
+
         jogadores = GlobalClass.jogadoresSelecionados;
-        Log.i("Global ficando null: ", "" + GlobalClass.jogadoresSelecionados);
         Times t = new Times();
+
         while (jogadores.size() > 0){
             int tm = 0;
             while (tm != 4 && jogadores.size() > 0) {
                 int y = random.nextInt(jogadores.size());
                 t.addJogador1(jogadores.get(y));
                 jogadores.remove(y);
-
-
                 tm++;
             }
             tm = 0;
@@ -169,18 +167,15 @@ public class TimesAdapter extends RecyclerView.Adapter<TimesAdapter.ViewHolderTi
                 int z = random.nextInt(jogadores.size());
                 t.addJogador2(jogadores.get(z));
                 jogadores.remove(z);
-
-//                if (t.getSizeTime2() == 4) {
-//                    time.add(t);
-//                    t = new Times();
-//                }
                 tm++;
             }
 
-            if (t.getSizeTime1() == 4) {
-                time.add(t);
-                t = new Times();
-            }
+            time.add(t);
+            t = new Times();
+//            if (t.getSizeTime1() == 4) {
+//                time.add(t);
+//                t = new Times();
+//            }
         }
 
         return time.size();

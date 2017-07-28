@@ -19,7 +19,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="56dp"
-        android:layout_marginBottom="56dp">
+        android:layout_marginBottom="56dp"
+        android:background="#389818">
 
     </android.support.design.widget.AppBarLayout>
 
@@ -33,7 +34,6 @@
         android:layout_marginBottom="20dp"
         android:layout_marginRight="20dp"
         android:clickable="true"
-        app:backgroundTint="@color/colorButton"
         app:srcCompat="@drawable/ic_thumb_up_white_24dp"/>
 
 </android.support.design.widget.CoordinatorLayout>

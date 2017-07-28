@@ -13,7 +13,7 @@ import com.example.renatodias.pereirofc.R;
 import com.example.renatodias.pereirofc.model.Jogador;
 
 public class JogadorAdapter extends RecyclerView.Adapter<JogadorAdapter.ViewHolder> {
-    
+
     private Jogador[] jogadores = {
             new Jogador(0  , "Bruno", R.drawable.bruno, false),
             new Jogador(1  , "Daniel Santos", R.drawable.daniel_santos, false),
@@ -64,7 +64,7 @@ public class JogadorAdapter extends RecyclerView.Adapter<JogadorAdapter.ViewHold
                         v.setClickable(false);
                         jogadores[position].setSelecionado(true);
                     }else{
-                        v.setBackgroundColor(Color.parseColor("#ffffff"));
+//                        v.setBackgroundColor(Color.parseColor("#f2f2f2"));
                         checkOk.setImageResource(R.drawable.ic_check_black_24dp);
                         checkOk.setVisibility(View.INVISIBLE);
                         v.setClickable(true);
@@ -91,7 +91,7 @@ public class JogadorAdapter extends RecyclerView.Adapter<JogadorAdapter.ViewHold
             viewHolder.checkOk.setVisibility(View.VISIBLE);
             viewHolder.itemView.setClickable(false);
         }else {
-            viewHolder.itemView.setBackgroundColor(Color.parseColor("#ffffff"));
+            viewHolder.itemView.setBackgroundColor(Color.parseColor("#f2f2f2"));
             viewHolder.itemView.setClickable(true);
             viewHolder.checkOk.setVisibility(View.INVISIBLE);
         }

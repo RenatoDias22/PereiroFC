@@ -17,14 +17,6 @@
         android:background="@color/colorPereiroFC"
         tools:context="com.example.renatodias.pereirofc.activitys.MainActivity">
 
-        <!--<TextView-->
-            <!--android:layout_width="fill_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:text="PEREIRO FC!"-->
-            <!--android:gravity="center"-->
-            <!--android:id="@+id/textApresentacao"-->
-            <!--android:textColor="#fff"-->
-            <!--android:textSize="25sp"/>-->
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recycler_view_times"
