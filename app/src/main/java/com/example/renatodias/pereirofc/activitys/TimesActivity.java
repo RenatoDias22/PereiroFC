@@ -1,5 +1,6 @@
 package com.example.renatodias.pereirofc.activitys;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -7,6 +8,7 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.view.KeyEvent;
 
 import com.example.renatodias.pereirofc.GlobalClass;
 import com.example.renatodias.pereirofc.model.Jogador;
@@ -55,5 +57,24 @@ public class TimesActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         GlobalClass.jogadoresSelecionados = new ArrayList<>();
+    }
+
+    @Override
+    public void onBackPressed() {
+        GlobalClass.jogadoresSelecionados = new ArrayList<>();
+        Intent intent = new Intent(TimesActivity.this, MainActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            GlobalClass.jogadoresSelecionados = new ArrayList<>();
+            onBackPressed();
+
+        }
+
+        return super.onKeyDown(keyCode, event);
     }
 }

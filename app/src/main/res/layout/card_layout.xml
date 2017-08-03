@@ -22,6 +22,7 @@
         android:layout_marginBottom="4dp"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="7dp"/>
+
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="120dp"
@@ -44,28 +45,70 @@
             android:layout_alignParentTop="true"
             android:layout_marginRight="16dp"
             />
+        <LinearLayout
+            android:foregroundGravity=""
+            android:gravity="center_vertical"
+            android:id="@+id/containerText"
+            android:layout_toRightOf="@id/item_image"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/item_title"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_alignParentTop="true"
-            android:layout_toRightOf="@+id/item_image"
-            android:gravity="center"
-            android:textSize="30sp" />
+            <TextView
+                android:paddingTop="24dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:id="@+id/item_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/item_image"
+                android:ellipsize="end"
+                android:text="Nome da categoria"
+                android:textAllCaps="true"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <!--<TextView-->
+                <!--android:maxLines="1"-->
+                <!--android:textSize="14sp"-->
+                <!--android:paddingLeft="16dp"-->
+                <!--android:paddingRight="16dp"-->
+                <!--android:id="@+id/category_desc"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@+id/category_name"-->
+                <!--android:layout_centerInParent="true"-->
+                <!--android:layout_toRightOf="@+id/category_photo"-->
+                <!--android:text="Descrição da categoria com alguns detalhes"-->
+                <!--android:textAllCaps="false"-->
+                <!--android:textStyle="bold" />-->
+
+            <!--<TextView-->
+                <!--android:maxLines="1"-->
+                <!--android:textSize="12sp"-->
+                <!--android:paddingLeft="16dp"-->
+                <!--android:paddingRight="16dp"-->
+                <!--android:id="@+id/item_id"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@+id/category_name"-->
+                <!--android:layout_centerInParent="true"-->
+                <!--android:layout_toRightOf="@+id/category_photo"-->
+                <!--android:text="16 items"-->
+                <!--android:textAllCaps="false"-->
+                <!--android:textStyle="bold" />-->
+
+        </LinearLayout>
 
         <ImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:id="@+id/checkOk"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginRight="16dp"
-            android:layout_below="@+id/item_title"
+            android:layout_below="@+id/item_image"
             />
-        <View
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"></View>
 
     </RelativeLayout>
 </android.support.v7.widget.CardView>

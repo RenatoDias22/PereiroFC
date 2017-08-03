@@ -5,44 +5,37 @@
     <application
         android:allowBackup="true"
         android:hardwareAccelerated="false"
-        android:largeHeap="true"
         android:icon="@mipmap/pereirofc"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/pereirofc"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        android:screenOrientation="portrait">
+        android:theme="@style/AppTheme">
 
         <activity android:name=".splash.Splash">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activitys.MainActivity" />
+        <activity
+            android:name=".activitys.MainActivity"
+            android:screenOrientation="portrait"
+            android:noHistory = "true" />
 
-        <!--<activity android:name=".activitys.MainActivity">-->
-            <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN" />-->
+        <activity
+            android:name=".activitys.TimesActivity"
+            android:screenOrientation="portrait"/>
 
-                <!--<category android:name="android.intent.category.LAUNCHER" />-->
-            <!--</intent-filter>-->
-        <!--</activity>-->
+        <activity
+            android:name=".activitys.CadastrarJogadorActivity"
+            android:screenOrientation="portrait"/>
 
-        <!--<activity-->
-            <!--android:name=".activitys.TimesActivity"-->
-            <!--android:label="Pereiro FC"-->
-            <!--android:parentActivityName=".activitys.TimesActivity" >-->
-            <!--&lt;!&ndash; Parent activity meta-data to support 4.0 and lower &ndash;&gt;-->
-            <!--<meta-data-->
-                <!--android:name="android.support.PARENT_ACTIVITY"-->
-                <!--android:value=".activitys.MainActivity" />-->
-        <!--</activity>-->
 
         <application android:name=".JogadorAdapter" />
 
-        <activity android:name=".activitys.TimesActivity"></activity>
+
     </application>
 
 </manifest>

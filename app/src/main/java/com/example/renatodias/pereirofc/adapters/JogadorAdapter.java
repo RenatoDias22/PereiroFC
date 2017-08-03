@@ -55,9 +55,9 @@ public class JogadorAdapter extends RecyclerView.Adapter<JogadorAdapter.ViewHold
 
         public ViewHolder(final View itemView) {
             super(itemView);
-            itemImage = (ImageView)itemView.findViewById(R.id.item_image);
-            itemTitle = (TextView)itemView.findViewById(R.id.item_title);
-            checkOk = (ImageView)itemView.findViewById(R.id.checkOk);
+            itemImage  = (ImageView)itemView.findViewById(R.id.item_image);
+            itemTitle  = (TextView)itemView.findViewById(R.id.item_title);
+            checkOk    = (ImageView)itemView.findViewById(R.id.checkOk);
             background = (ImageView) itemView.findViewById(R.id.item_image_fundo);
 
             itemView.setOnClickListener(new View.OnClickListener() {
@@ -66,15 +66,13 @@ public class JogadorAdapter extends RecyclerView.Adapter<JogadorAdapter.ViewHold
 
                     if(jogadores[position].getSelecionado() == false) {
                         GlobalClass.jogadoresSelecionados.add(new Jogador(jogadores[position]));
-//                        v.setBackgroundColor(Color.parseColor("#999999"));
                         background.setBackgroundColor(Color.parseColor("#999999"));
-                        checkOk.setImageResource(R.drawable.ic_check_black_24dp);
+                        checkOk.setImageResource(R.mipmap.checkbola);
                         checkOk.setVisibility(View.VISIBLE);
                         v.setClickable(false);
                         jogadores[position].setSelecionado(true);
                     }else{
-//                        v.setBackgroundColor(Color.parseColor("#f2f2f2"));
-                        checkOk.setImageResource(R.drawable.ic_check_black_24dp);
+                        checkOk.setImageResource(R.mipmap.checkbola);
                         checkOk.setVisibility(View.INVISIBLE);
                         v.setClickable(true);
                     }
@@ -95,13 +93,11 @@ public class JogadorAdapter extends RecyclerView.Adapter<JogadorAdapter.ViewHold
         viewHolder.itemImage.setImageResource(jogadores[i].getFotoPerfil());
 
         if(jogadores[i].getSelecionado()){
-//            viewHolder.itemView.setBackgroundColor(Color.parseColor("#999999"));
             viewHolder.background.setBackgroundColor(Color.parseColor("#999999"));
-            viewHolder.checkOk.setImageResource(R.drawable.ic_check_black_24dp);
+            viewHolder.checkOk.setImageResource(R.mipmap.checkbola);
             viewHolder.checkOk.setVisibility(View.VISIBLE);
             viewHolder.itemView.setClickable(false);
         }else {
-//            viewHolder.itemView.setBackgroundColor(Color.parseColor("#f2f2f2"));
             viewHolder.background.setBackgroundColor(Color.parseColor("#f2f2f2"));
             viewHolder.itemView.setClickable(true);
             viewHolder.checkOk.setVisibility(View.INVISIBLE);
