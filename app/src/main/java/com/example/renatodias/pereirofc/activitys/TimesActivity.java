@@ -31,7 +31,7 @@ public class TimesActivity extends AppCompatActivity {
         toolbar = (Toolbar) findViewById(R.id.my_toolbar_times);
         toolbar.setTitle("Pereiro FC");
         toolbar.setTitleTextColor(Color.parseColor("#ffffff"));
-        toolbar.setNavigationIcon(R.mipmap.icon_pereiro);
+        toolbar.setNavigationIcon(R.mipmap.pereirofc);
         setSupportActionBar(toolbar);
 
         final ActionBar actionBar = getSupportActionBar();

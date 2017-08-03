@@ -6,7 +6,7 @@
     android:layout_height="280dp"
     android:id="@+id/card_view_times"
     android:layout_margin="5dp"
-    card_view:cardBackgroundColor="#f2f2f2"
+    card_view:cardBackgroundColor="#f1f8f8"
     card_view:cardCornerRadius="12dp"
     card_view:cardElevation="3dp"
     card_view:contentPadding="4dp"

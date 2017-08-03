@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#389818</color>
+    <color name="colorPrimary">#98961B</color>
+    <!--<color name="colorPrimary">#ffffff</color>-->
     <!--<color name="colorPrimary">#3F51B5</color>-->
-    <color name="colorPrimaryDark">#174B06</color>
-    <color name="colorAccent">#980082</color>
-    <color name="colorPereiroFC">#174B06</color>
+    <color name="colorPrimaryDark">#4B4A07</color>
+    <!--<color name="colorPrimaryDark">#ffffff</color>-->
+    <color name="colorAccent">#531B98</color>
+    <color name="colorPereiroFC">#ffffff</color>
 
 </resources>

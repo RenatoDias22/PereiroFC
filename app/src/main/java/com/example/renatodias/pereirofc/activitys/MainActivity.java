@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         toolbar = (Toolbar) findViewById(R.id.my_toolbar);
         toolbar.setTitle("Pereiro FC");
         toolbar.setTitleTextColor(Color.parseColor("#ffffff"));
-        toolbar.setNavigationIcon(R.mipmap.icon_pereiro);
+        toolbar.setNavigationIcon(R.mipmap.pereirofc);
         setSupportActionBar(toolbar);
         recyclerView =
                 (RecyclerView) findViewById(R.id.recycler_view);

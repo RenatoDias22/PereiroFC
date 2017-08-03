@@ -26,20 +26,9 @@ public class TimesAdapter extends RecyclerView.Adapter<TimesAdapter.ViewHolderTi
     Random random = new Random();
     List<Times> time = new ArrayList<>();
     List<Jogador> jogadores = new ArrayList<>();
-//    private Jogador[] jogadores = {
-//            new Jogador(1 ,"Renato Dias", R.drawable.renato_dias),
-//            new Jogador(2 ,"Filippe Morais", R.drawable.filippe_morais),
-//            new Jogador(3 ,"Renato Helsson", R.drawable.renato_helsson),
-//            new Jogador(4 ,"Italo Siqueira", R.drawable.italo_siqueira),
-//            new Jogador(5 ,"Wilson Vasconcelos", R.drawable.wilson_vasconcelos),
-//            new Jogador(6 ,"Perboyre Morais", R.drawable.perboyre_morais),
-//            new Jogador(7 ,"Bruno", R.drawable.bruno)
-//
-//    };
 
     class ViewHolderTimes extends RecyclerView.ViewHolder{
 
-        public int currentItem;
         public ImageView itemImageJogador_1_1;
         public ImageView itemImageJogador_1_2;
         public ImageView itemImageJogador_1_3;
@@ -57,10 +46,6 @@ public class TimesAdapter extends RecyclerView.Adapter<TimesAdapter.ViewHolderTi
         public TextView itemTexteJogador_2_2;
         public TextView itemTexteJogador_2_3;
         public TextView itemTexteJogador_2_4;
-
-//        public ImageView checkOk;
-//        public TextView itemTitle;
-//        public TextView itemDetail;
 
         public ViewHolderTimes(View itemView) {
             super(itemView);
@@ -86,10 +71,6 @@ public class TimesAdapter extends RecyclerView.Adapter<TimesAdapter.ViewHolderTi
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override public void onClick(View v) {
-                    int position = getAdapterPosition();
-//                    GlobalClass.jogadoresSelecionados.add(new Jogador(jogadores[position]));
-//                    v.setBackgroundColor(Color.parseColor("#999999"));
-//                    checkOk.setImageResource(R.drawable.ic_thumb_up_black_24dp);
                     v.setClickable(false);
                 }
             });
@@ -172,10 +153,6 @@ public class TimesAdapter extends RecyclerView.Adapter<TimesAdapter.ViewHolderTi
 
             time.add(t);
             t = new Times();
-//            if (t.getSizeTime1() == 4) {
-//                time.add(t);
-//                t = new Times();
-//            }
         }
 
         return time.size();
