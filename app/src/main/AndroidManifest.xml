@@ -3,6 +3,7 @@
     package="com.example.renatodias.pereirofc">
 
     <application
+        android:name=".application.CustomApplication"
         android:allowBackup="true"
         android:hardwareAccelerated="false"
         android:icon="@mipmap/pereirofc"

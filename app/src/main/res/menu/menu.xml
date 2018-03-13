@@ -9,7 +9,7 @@
         android:id="@+id/action_add"
         android:orderInCategory="200"
         android:title="Add"
-        android:icon="@mipmap/add_usuario"
+        android:icon="@drawable/user_add"
         app:showAsAction="ifRoom"
         ></item>
 

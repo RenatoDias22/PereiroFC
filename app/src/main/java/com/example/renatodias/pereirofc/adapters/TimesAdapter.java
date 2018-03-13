@@ -1,5 +1,7 @@
 package com.example.renatodias.pereirofc.adapters;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -18,6 +20,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import io.realm.Realm;
+import io.realm.RealmResults;
+
 /**
  * Created by renatodias on 25/07/17.
  */
@@ -26,6 +31,9 @@ public class TimesAdapter extends RecyclerView.Adapter<TimesAdapter.ViewHolderTi
     Random random = new Random();
     List<Times> time = new ArrayList<>();
     List<Jogador> jogadores = new ArrayList<>();
+
+    Realm realm = Realm.getDefaultInstance();
+    RealmResults<Jogador> jogadoress = realm.where(Jogador.class).findAll();
 
     class ViewHolderTimes extends RecyclerView.ViewHolder{
 
@@ -90,40 +98,56 @@ public class TimesAdapter extends RecyclerView.Adapter<TimesAdapter.ViewHolderTi
         if(time.get(position).getTime1() != null) {
             List<Jogador> time1 = time.get(position).getTime1();
             if (time1.size() > 0) {
-                holder.itemImageJogador_1_1.setImageResource(time1.get(0).getFotoPerfil());
+                Bitmap bitmap = BitmapFactory.decodeByteArray(time1.get(0).getFoto(), 0, time1.get(0).getFoto().length);
+                holder.itemImageJogador_1_1.setImageBitmap(bitmap);
+//                holder.itemImageJogador_1_1.setImageResource(time1.get(0).getFotoPerfil());
                 holder.itemTexteJogador_1_1.setText(time1.get(0).getNome());
             }
             if (time1.size() > 1) {
-                holder.itemImageJogador_1_2.setImageResource(time1.get(1).getFotoPerfil());
+                Bitmap bitmap = BitmapFactory.decodeByteArray(time1.get(1).getFoto(), 0, time1.get(1).getFoto().length);
+                holder.itemImageJogador_1_2.setImageBitmap(bitmap);
+//                holder.itemImageJogador_1_2.setImageResource(time1.get(1).getFotoPerfil());
                 holder.itemTexteJogador_1_2.setText(time1.get(1).getNome());
             }
             if (time1.size() > 2) {
-                holder.itemImageJogador_1_3.setImageResource(time1.get(2).getFotoPerfil());
+                Bitmap bitmap = BitmapFactory.decodeByteArray(time1.get(2).getFoto(), 0, time1.get(2).getFoto().length);
+                holder.itemImageJogador_1_3.setImageBitmap(bitmap);
+//                holder.itemImageJogador_1_3.setImageResource(time1.get(2).getFotoPerfil());
                 holder.itemTexteJogador_1_3.setText(time1.get(2).getNome());
             }
             if (time1.size() > 3) {
-                holder.itemImageJogador_1_4.setImageResource(time1.get(3).getFotoPerfil());
+                Bitmap bitmap = BitmapFactory.decodeByteArray(time1.get(3).getFoto(), 0, time1.get(3).getFoto().length);
+                holder.itemImageJogador_1_4.setImageBitmap(bitmap);
+//                holder.itemImageJogador_1_4.setImageResource(time1.get(3).getFotoPerfil());
                 holder.itemTexteJogador_1_4.setText(time1.get(3).getNome());
             }
         }
         if(time.get(position).getTime2() != null) {
             List<Jogador> time2 = time.get(position).getTime2();
             if (time2.size() > 0) {
-                holder.itemImageJogador_2_1.setImageResource(time2.get(0).getFotoPerfil());
+                Bitmap bitmap = BitmapFactory.decodeByteArray(time2.get(0).getFoto(), 0, time2.get(0).getFoto().length);
+                holder.itemImageJogador_2_1.setImageBitmap(bitmap);
+//                holder.itemImageJogador_2_1.setImageResource(time2.get(0).getFotoPerfil());
                 holder.itemTexteJogador_2_1.setText(time2.get(0).getNome());
             }
 
             if (time2.size() > 1) {
-                holder.itemImageJogador_2_2.setImageResource(time2.get(1).getFotoPerfil());
+                Bitmap bitmap = BitmapFactory.decodeByteArray(time2.get(1).getFoto(), 0, time2.get(1).getFoto().length);
+                holder.itemImageJogador_2_2.setImageBitmap(bitmap);
+//                holder.itemImageJogador_2_2.setImageResource(time2.get(1).getFotoPerfil());
                 holder.itemTexteJogador_2_2.setText(time2.get(1).getNome());
             }
 
             if (time2.size() > 2) {
-                holder.itemImageJogador_2_3.setImageResource(time2.get(2).getFotoPerfil());
+                Bitmap bitmap = BitmapFactory.decodeByteArray(time2.get(2).getFoto(), 0, time2.get(2).getFoto().length);
+                holder.itemImageJogador_2_3.setImageBitmap(bitmap);
+//                holder.itemImageJogador_2_3.setImageResource(time2.get(2).getFotoPerfil());
                 holder.itemTexteJogador_2_3.setText(time2.get(2).getNome());
             }
             if (time2.size() > 3) {
-                holder.itemImageJogador_2_4.setImageResource(time2.get(3).getFotoPerfil());
+                Bitmap bitmap = BitmapFactory.decodeByteArray(time2.get(3).getFoto(), 0, time2.get(3).getFoto().length);
+                holder.itemImageJogador_2_4.setImageBitmap(bitmap);
+//                holder.itemImageJogador_2_4.setImageResource(time2.get(3).getFotoPerfil());
                 holder.itemTexteJogador_2_4.setText(time2.get(3).getNome());
             }
         }
@@ -133,8 +157,19 @@ public class TimesAdapter extends RecyclerView.Adapter<TimesAdapter.ViewHolderTi
     public int getItemCount() {
 
         jogadores = GlobalClass.jogadoresSelecionados;
-        Times t = new Times();
 
+
+//        for (int i = 0 ; i < jogadoress.size(); i++){
+//            Jogador j = new Jogador();
+//            j.setId(jogadoress.get(i).getId());
+//            j.setFoto(jogadoress.get(i).getFoto());
+//            j.setFotoPerfil(jogadoress.get(i).getFotoPerfil());
+//            j.setNome(jogadoress.get(i).getNome());
+//
+//            jogadores.add(j);
+//        }
+
+        Times t = new Times();
         while (jogadores.size() > 0){
             int tm = 0;
             while (tm != 4 && jogadores.size() > 0) {

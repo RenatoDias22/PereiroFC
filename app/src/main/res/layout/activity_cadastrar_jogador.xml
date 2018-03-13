@@ -6,14 +6,26 @@
     android:layout_height="match_parent"
     tools:context="com.example.renatodias.pereirofc.activitys.CadastrarJogadorActivity">
 
+    <!--<android.support.v7.widget.Toolbar-->
+        <!--android:id="@+id/my_toolbar_cadastro"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="56dp"-->
+        <!--android:background="?attr/colorPrimary"-->
+        <!--android:elevation="4dp"-->
+        <!--android:theme="@style/ThemeOverlay.AppCompat.ActionBar"-->
+        <!--app:popupTheme="@style/ThemeOverlay.AppCompat.Light"-->
+        <!--tools:layout_editor_absoluteY="0dp"-->
+        <!--tools:layout_editor_absoluteX="8dp" />-->
+
     <android.support.v7.widget.Toolbar
         android:id="@+id/my_toolbar_cadastro"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
+        android:layout_height="56dp"
         android:background="?attr/colorPrimary"
         android:elevation="4dp"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+        android:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        />
 
     <RelativeLayout
         android:layout_width="wrap_content"
@@ -23,16 +35,15 @@
 
         <ImageView
             android:id="@+id/button_camera"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
             android:text="Camera"
             android:onClick="addFoto"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="16dp"
-            android:layout_marginTop="115dp"
-            android:layout_marginLeft="135dp"
+            android:layout_marginTop="100dp"
             android:src="@drawable/jogador_sem_foto"
-            />
+            android:layout_alignParentTop="true"
+            android:layout_alignLeft="@+id/add"
+            android:layout_alignStart="@+id/add" />
 
         <TextView
             android:paddingTop="2dp"
@@ -69,8 +80,8 @@
             android:text="Adicionar"
             android:id="@+id/button_add_jogador"
             android:layout_below="@+id/nome_jogador"
-            android:layout_marginLeft="80dp"
-            android:layout_marginTop="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
             android:background="@color/colorPrimary"
             android:textColor="@color/colorPereiroFC"
             android:onClick="addJogador"/>

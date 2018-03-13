@@ -15,6 +15,10 @@ import android.widget.TextView;
 
 import com.example.renatodias.pereirofc.adapters.JogadorAdapter;
 import com.example.renatodias.pereirofc.R;
+import com.example.renatodias.pereirofc.model.Jogador;
+
+import io.realm.Realm;
+import io.realm.RealmResults;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -27,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
         toolbar = (Toolbar) findViewById(R.id.my_toolbar);
         toolbar.setTitle("Pereiro FC");
@@ -40,7 +45,13 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);
 
         adapter = new JogadorAdapter();
+
         recyclerView.setAdapter(adapter);
+
+        Realm realm = Realm.getInstance(this);
+        RealmResults<Jogador> jogadores = realm.where(Jogador.class).findAll();
+
+        realm.close();
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -68,7 +79,6 @@ public class MainActivity extends AppCompatActivity {
         if (id == R.id.action_add) {
             Intent intent = new Intent(MainActivity.this, CadastrarJogadorActivity.class);
             startActivity(intent);
-            finish();
             return true;
         }
         return super.onOptionsItemSelected(item);
